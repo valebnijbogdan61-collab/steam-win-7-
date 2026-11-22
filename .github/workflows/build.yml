@@ -23,7 +23,7 @@ jobs:
             -static -static-libgcc -static-libstdc++ \
             -DUNICODE -D_UNICODE -DWINVER=0x0601 -D_WIN32_WINNT=0x0601 -Isrc \
             src/*.cpp build/steam_res.o \
-            -o build/Steam.exe -lgdi32 -lcomctl32 -lcomdlg32 -lshell32 -lole32 -lgdiplus -lwinhttp -lmsimg32
+           -o build/Steam.exe -lgdi32 -lcomctl32 -lcomdlg32 -lshell32 -lole32 -loleaut32 -luuid -lgdiplus -lwinhttp -lmsimg32
 
       - name: Copy config.ini
         run: cp config.ini build/config.ini
